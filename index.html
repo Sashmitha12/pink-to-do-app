@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Todo | My Daily Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="flower">🌸</div>
+      <p class="eyebrow">YOUR LITTLE SPACE TO GROW</p>
+      <h1>My Daily Planner</h1>
+      <p class="subtitle">Small steps, lovely progress ♡</p>
+    </header>
+
+    <section class="date-card">
+      <div>
+        <p class="muted">TODAY IS</p>
+        <h2 id="today">Your day</h2>
+      </div>
+      <div class="date-icon">♡</div>
+    </section>
+
+    <section class="form-card">
+      <h2>Add a new task ✨</h2>
+      <form id="taskForm">
+        <label for="taskInput">Task name</label>
+        <input id="taskInput" type="text"
+          placeholder="What would you like to do?" maxlength="150" required>
+
+        <label for="taskTime">Deadline (optional)</label>
+        <input id="taskTime" type="datetime-local">
+
+        <button class="primary-btn" type="submit">＋ Add my task</button>
+      </form>
+    </section>
+
+    <section class="reminder-card">
+      <div>
+        <strong>Reminder notifications</strong>
+        <p id="notificationStatus">Turn on reminders for your tasks.</p>
+      </div>
+      <button id="notifyBtn" class="secondary-btn" type="button">
+        Enable
+      </button>
+    </section>
+
+    <section class="tasks-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR LITTLE WINS</p>
+          <h2>My tasks <span>♡</span></h2>
+        </div>
+        <span id="taskCount" class="count">0 tasks</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+      <p id="progressText" class="progress-text">Let's make today lovely!</p>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="pending">To do</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+      <button id="clearCompleted" class="clear-btn" type="button">
+        Clear completed tasks
+      </button>
+    </section>
+
+    <footer>Made with love, just for you 💗</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
